@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.12.7 on win32)" generated="2025-03-03T09:02:40.944427" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotAILibrary-main" source="C:\Users\Admin\Downloads\RobotAILibrary-main">
+<suite id="s1-s1" name="Sample Project" source="C:\Users\Admin\Downloads\RobotAILibrary-main\Sample_Project">
+<suite id="s1-s1-s1" name="TestCases" source="C:\Users\Admin\Downloads\RobotAILibrary-main\Sample_Project\TestCases">
+<suite id="s1-s1-s1-s1" name="AI Library" source="C:\Users\Admin\Downloads\RobotAILibrary-main\Sample_Project\TestCases\AI_Library.robot">
+<test id="s1-s1-s1-s1-t1" name="Generate Custom Test Data" line="17">
+<kw name="Generate General Test Data" owner="RobotFrameworkAI">
+<msg time="2025-03-03T09:02:50.272141" level="INFO">HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"</msg>
+<msg time="2025-03-03T09:02:50.280102" level="INFO">Request being handled by openai...</msg>
+<msg time="2025-03-03T09:02:50.280102" level="INFO">${response} = [{'email': 'userexample.com', 'password': 'Password123'}, {'email': 'user@.com', 'password': 'Password123'}, {'email': '@domain.com', 'password': '-InvalidPassw0rd'}]</msg>
+<var>${response}</var>
+<arg>openai</arg>
+<arg>prompt=Generate Real Negative testdata for login google email and password like 9 scenarios 1) Missing "@", 2) Missing domain,3) Missing username, 4) Invalid characters org name,5) Spaces in email, 6) Multiple "@" symbols, 7) Exceeding character limit: An email address longer than 254 characters,8) Missing top-level domain,9) Invalid top-level domain, Consecutive dots. only keep test data.</arg>
+<doc>Generates test data based on a custom prompt.</doc>
+<status status="PASS" start="2025-03-03T09:02:45.254596" elapsed="5.026507"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-03T09:02:50.282100" level="INFO">[{'email': 'userexample.com', 'password': 'Password123'}, {'email': 'user@.com', 'password': 'Password123'}, {'email': '@domain.com', 'password': '-InvalidPassw0rd'}]</msg>
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-03T09:02:50.281408" elapsed="0.000692"/>
+</kw>
+<status status="PASS" start="2025-03-03T09:02:45.252639" elapsed="5.030417"/>
+</test>
+<status status="PASS" start="2025-03-03T09:02:41.024550" elapsed="9.259552"/>
+</suite>
+<status status="PASS" start="2025-03-03T09:02:41.021421" elapsed="9.265457"/>
+</suite>
+<status status="PASS" start="2025-03-03T09:02:41.018012" elapsed="9.271858"/>
+</suite>
+<status status="PASS" start="2025-03-03T09:02:40.946423" elapsed="9.346469"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="RobotAILibrary-main" id="s1" pass="1" fail="0" skip="0">RobotAILibrary-main</stat>
+<stat name="Sample Project" id="s1-s1" pass="1" fail="0" skip="0">RobotAILibrary-main.Sample Project</stat>
+<stat name="TestCases" id="s1-s1-s1" pass="1" fail="0" skip="0">RobotAILibrary-main.Sample Project.TestCases</stat>
+<stat name="AI Library" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">RobotAILibrary-main.Sample Project.TestCases.AI Library</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-03T09:02:45.249655" level="ERROR">Error in file 'C:\Users\Admin\Downloads\RobotAILibrary-main\Sample_Project\TestCases\AI_Library.robot' on line 5: Importing library 'GeneralRealTestDataGenerator' failed: ModuleNotFoundError: No module named 'GeneralRealTestDataGenerator'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Admin\Downloads\RobotAILibrary-main
+  C:\Users\Admin\Downloads\RobotAILibrary-main
+  C:\Users\Admin\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\Admin\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\Admin\AppData\Local\Programs\Python\Python312
+  C:\Users\Admin\PycharmProjects\RobotTestAI\.venv
+  C:\Users\Admin\PycharmProjects\RobotTestAI\.venv\Lib\site-packages</msg>
+</errors>
+</robot>
